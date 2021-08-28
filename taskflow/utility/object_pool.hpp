@@ -626,7 +626,7 @@ T* ObjectPool<T, S>::animate(ArgsT&&... args) {
       s = new Block();
 
       if(s == nullptr) {
-        throw std::bad_alloc();
+        abort();
       }
 
       s->heap = &h;
